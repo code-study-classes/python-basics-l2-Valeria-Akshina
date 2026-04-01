@@ -1,5 +1,5 @@
-from functools import reduce
-
-
 def update_profile(user_id, **kwargs):
     return {'id': user_id, 'updated_fields': kwargs}
+
+def get_domains(emails):
+    return map(lambda email: email.split('@')[1], emails)
